@@ -16,7 +16,11 @@ export function Posts() {
     fetch("https://dummyjson.com/posts")
       .then((response) => response.json())
       .then((data) => {
-        setSearch(data.posts);
+        if(data.posts.lenght == 0){
+          alert("Nenhuma postagem com essa descrição foi encontrada")
+        }else{
+          setSearch(data.posts);
+        }
       });
   }, []);
 

@@ -30,7 +30,11 @@ export function Home() {
     await fetch(`https://dummyjson.com/users/search?q=${searchValue}`)
       .then((response) => response.json())
       .then((data) => {
-        setSearch(data.users);
+        if(data.users.length == 0){
+          alert("Nenhum usuario com este nome encontrado!")
+        }else{
+          setSearch(data.users);
+        }
       });
   }
 
@@ -55,7 +59,7 @@ export function Home() {
             <input
               type="text"
               className="bg-[#C5BEBE] ml-4 w-[20vw] rounded-full p-2 mr-4"
-              placeholder="Busque um usuário"
+              placeholder="Busque um usuário pelo nome"
               onChange={pegarvalor}
             />
           </div>
