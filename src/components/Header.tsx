@@ -16,7 +16,7 @@ export function Header(props: HeaderProps) {
         <div className="" hidden={props.primaryColor == "PRIMARY" ? false : true}>
         <UserCircle size={140} color="#000" />
         </div>
-        <div className="" hidden={props.primaryColor == "PRIMARY" ? true : false}>
+        <div className="" hidden={props.primaryColor == "PRIMARY" ? true : true}>
         <NotePencil size={140} color="#000" />
         </div>
         <p className="uppercase ml-4 font-bold text-7xl">{props.title}</p>

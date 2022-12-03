@@ -1,4 +1,4 @@
-import { MagnifyingGlass } from "phosphor-react";
+import { MagnifyingGlass, X } from "phosphor-react";
 import { useEffect, useState } from "react";
 import { Header } from "../components/Header";
 import { Users } from "../components/Users";
@@ -8,6 +8,13 @@ export interface Usuarios {
   firstName: string;
   lastName: string;
   image: string;
+  maidenName: string;
+  age: number;
+  gender: string;
+  email: string;
+  phone: string;
+  username: string;
+  birthDate: string;
 }
 
 export function Home() {
@@ -44,7 +51,7 @@ export function Home() {
       <div className=" mt-4">
         <div className="flex flex-row  justify-center">
           <div className="bg-[#C5BEBE] items-center flex rounded-full p-2 text-black">
-            <MagnifyingGlass size={30}  className="invisible"/>
+            <MagnifyingGlass size={30} />
             <input
               type="text"
               className="bg-[#C5BEBE] ml-4 w-[20vw] rounded-full p-2 mr-4"
@@ -67,6 +74,13 @@ export function Home() {
                 bannerUrl={search.image}
                 firstName={search.firstName}
                 lastName={search.lastName}
+                maidenName={search.maidenName}
+                age={search.age}
+                gender={search.gender}
+                email={search.email}
+                phone={search.phone}
+                username={search.username}
+                birthDate={search.birthDate}
               />
             );
           })}
