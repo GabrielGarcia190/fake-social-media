@@ -51,7 +51,7 @@ export function Users(props: UsersProps) {
         isOpen={modalIsOpen}
         contentLabel="modal-resultado"
         overlayClassName="modal-overlay"
-        className="flex flex-col rounded-lg mx-auto my-auto items-center mt-[20vh] bg-[#C5BEBE] w-[40vw] h-[55vh] shadow-xl"
+        className="flex flex-col rounded-lg mx-auto my-auto items-center mt-[20vh] bg-[#C5BEBE] w-[40vw] h-[77vh] shadow-xl"
       >
         <button onClick={closeModal}>
           <X size={30} className="text-red-600 ml-[37vw] mt-2" weight="bold" />
